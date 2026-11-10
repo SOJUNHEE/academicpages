@@ -36,3 +36,17 @@
     "layout/archive",
     "layout/sidebar"
 ;
+/* ---- 사이트 커스텀 (한국어 본문) ---- */
+// 한국어 단어 중간에서 줄이 바뀌지 않게
+.page__title,
+.page__content,
+.archive {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+// 표의 첫 열(항목명·수치)이 한 글자씩 줄바꿈되지 않게
+.page__content table th:first-child,
+.page__content table td:first-child {
+  white-space: nowrap;
+}

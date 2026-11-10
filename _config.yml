@@ -7,41 +7,41 @@
 # server process.
 
 # Basic Site Settings
-locale                   : "en-US"
+locale                   : "ko-KR"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Your Name / Site Title"
+title                    : "Junhee So"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : https://academicpages.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
+name                     : &name "Junhee So"
+description              : &description "Junhee So의 포트폴리오"   # Update this with a general description of your site, this is the default if not overridden by a page
+url                      : https://sojunhee.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+baseurl                  : "/Portfolio_SOJUNHEE" # the subpath of your site, e.g. "/blog"
+repository               : "SOJUNHEE/Portfolio_SOJUNHEE"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  avatar           : # 실제 사진을 images/ 에 넣고 파일명을 적으면 표시 (비워 두면 테마 기본 실루엣을 숨김)
+  name             : "Junhee So"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
-  uri              : # URL
-  email            : "none@example.org" 
+  bio              : "물류 운영"
+  location         : "Seoul, Korea"
+  employer         :
+  uri              : "https://portfolio-sojunhee.vercel.app/"
+  email            : "sojh90@naver.com" 
 
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : # URL
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "https://orcid.org/yourorcidurl"
+  orcid            : # URL
   semantic         : # URL
   ssrn             : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : # URL
   researchgate     : # URL
   scopus           : # URL
   zotero           : # URL
@@ -51,13 +51,13 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "SOJUNHEE"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
   artstation       : # Username
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : # Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -125,7 +125,7 @@ staticman:
       options:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
+  hide                   : true      # 블로그 글이 없으므로 RSS 링크 숨김
   path                   : # blank (default) uses feed.xml
 
 
@@ -164,7 +164,7 @@ analytics:
 include:
   - .htaccess
   - _pages
-  - files
+  # - files   # 현재 files/ 에는 테마 예제 PDF만 있어 제외. 실제 첨부 파일을 넣으면 다시 포함
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -185,6 +185,44 @@ exclude:
   - gulpfile.js
   - LICENSE
   - local
+  - JUNHEE_Portfolio   # 기존 Flask 포트폴리오 원본 (사이트 빌드 제외)
+  # --- Academic Pages 테마 예제 콘텐츠: 지원자 본인 자료가 아니므로 공개 빌드에서 제외 (파일은 삭제하지 않음) ---
+  - _posts
+  - _drafts
+  - _publications
+  - _talks
+  - _teaching
+  - files
+  - talkmap
+  - talkmap.ipynb
+  - talkmap.py
+  - talkmap_out.ipynb
+  - markdown_generator
+  - scripts
+  - _pages/archive-layout-with-content.md
+  - _pages/category-archive.html
+  - _pages/collection-archive.html
+  - _pages/markdown.md
+  - _pages/non-menu-page.md
+  - _pages/page-archive.html
+  - _pages/publications.html
+  - _pages/tag-archive.html
+  - _pages/talkmap.html
+  - _pages/talks.html
+  - _pages/teaching.html
+  - _pages/terms.md
+  - _pages/year-archive.html
+  - images/500x300.png
+  - images/bio-photo.jpg
+  - images/bio-photo-2.jpg
+  - images/editing-talk.png
+  - images/profile.png
+  - images/themes
+  - images/wiki
+  - README.md
+  - AGENTS.md
+  - CONTRIBUTING.md
+  - docker-compose.yaml
   - log
   - node_modules
   - package.json*
@@ -221,17 +259,18 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
-  teaching:
-    output: true
+  teaching:            # Academic Pages 예제(학술 강의) — 공개 빌드에서 제외
+    output: false
     permalink: /:collection/:path/
-  publications:
-    output: true
+  publications:        # Academic Pages 예제(논문) — 공개 빌드에서 제외
+    output: false
     permalink: /:collection/:path/
   portfolio:
     output: true
     permalink: /:collection/:path/
-  talks:
-    output: true
+    sort_by: order
+  talks:               # Academic Pages 예제(학술 발표) — 공개 빌드에서 제외
+    output: false
     permalink: /:collection/:path/
 
 
@@ -302,7 +341,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: Etc/UTC # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins

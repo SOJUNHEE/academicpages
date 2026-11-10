@@ -9,56 +9,80 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+## 경력 요약
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+- **3PL·풀필먼트 센터 운영 3곳** · 약 2년 7개월
+- **수입통관·출고 데이터 1곳** · 약 2년 1개월
+- 재직 기간 기준 합계 **4년 8개월**
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+<small>각 성과는 해당 재직 기간의 업무 경험 기준이며, 회사별 운영 규모는 서로 합산하지 않았습니다.</small>
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+## 경력
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+### 젠미코리아 · 2024.06 — 2026.06
+경영지원실 무역행정팀 · 대리 / 팀원  
+<small>일본 수입식품 · 통관 및 출고 데이터 운영 · 월 약 6,000건 D2C / B2B 출고 데이터 처리</small>
+
+- 일본 수입 식품 통관 서류 및 Invoice · B/L · Packing List 검토
+- UNI-PASS 관련 업무 및 보세창고 입출고 일정 관리
+- 라벨 작업 일정 관리와 창고 일정 조율
+- 사방넷 기반 D2C / B2B 출고 데이터 처리
+
+**성과:** 보세창고 장기 적치 보관비 약 10% 감소 · 프리타임 준수율 100% · 통관 지연 감소 · 업무 휴먼 에러 최소화
+
+### 두잇로지스 · 2023.12 — 2024.05
+물류운영부 · 대리 / 팀장  
+<small>인터지스 남동센터 · 상온 3PL · 월 10,000건 이상 출고</small>
+
+- WMS 초기 데이터 세팅 및 신규 센터 입출고 작업 레이아웃 구성
+- FCL 컨테이너 입출고와 하역 인력 배치
+- B2C / B2B 일정 관리 및 배차 일정 조율
+- 화주사별 정산 · 생산성 데이터 확인 · 운영 단가 검토
+
+**성과:** 센터 보관 효율 약 28% 개선 · 고객사 클레임 당일 처리율 약 95% · 월 마감 소요기간 7일 → 3일 단축
+
+### 제이아이로지스 · 2022.04 — 2023.09
+운영3팀 · 대리 / 센터장  
+<small>다품종 소형가전 3PL 센터 · 월 20,000건 이상 출고</small>
+
+- D2C 택배 · B2B 대량 출고 및 Excel 전산관리
+- 재고관리 · 피킹 / 패킹 작업관리 · 작업동선 개선
+- FCL 일정관리 및 화주 커뮤니케이션
+- 물류 운영 단가 관리와 정산
+
+**성과:** 오출고율 월 1% 미만 · 재고 정확도 99% · 현장 생산성 약 5% 향상 · 불필요한 연장근로 및 인건비 약 10% 감소
+
+### 굿앤파트너스 · 2021.09 — 2022.03
+메쉬코리아 김포 풀필먼트 · 주임 / 계장  
+<small>월 50,000건 이상 출고 · 약 15개 화주사 대응</small>
+
+- B2C 출고 및 B2B 대량 출고
+- WMS 운영 및 채널별 출고 작업계획
+- 출고 피크타임 분석과 생산성 모니터링
+- 화주 커뮤니케이션 및 월간 재고 마감
+
+## 교육
+
+- **한국무역아카데미 무역 AX 2기** — 데이터 분석, AI, Python, 웹 기반 시스템 (수강 중)
+- **수원과학대학교** · 건축학과
+
+## 자격
+
+- 新 JLPT N5
+- 건설기계조종면허
+- 1종 보통 운전면허
+
+## 기술
+
+| 분야 | 수준 | 내용 |
+|---|---|---|
+| Logistics Operations | 실무 경험 | 3PL / 풀필먼트 · WMS · DAS · 재고 · 입출고 관리 · B2C · B2B 출고 · 물류비 정산 · Excel 전산관리 · FCL |
+| Trade & Customs | 실무 경험 | 수입통관 서류 · UNI-PASS · 보세창고 · 사방넷 · 협력사 일정 조율 |
+| Data | 실무 + 학습 확장 | 생산성 데이터 확인(실무) · 데이터 분석(학습 중) |
+| Python · AI · Web | 학습·적용 중 | Python · AI 활용 업무 자동화 · 웹 기반 운영 대시보드 |
+
+## 프로젝트
+
+<ul>{% for post in site.portfolio %}
+  {% include archive-single-cv.html %}
+{% endfor %}</ul>

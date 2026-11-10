@@ -12,3 +12,6 @@ end
 
 gem 'kramdown'
 gem 'kramdown-parser-gfm'
+
+# Windows 로컬 미리보기용 (GitHub 배포에는 영향 없음)
+gem 'tzinfo-data', platforms: [:windows, :jruby]

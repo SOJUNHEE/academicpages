@@ -1,56 +1,93 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "현장을 이해하고, 데이터로 물류 운영을 개선합니다."
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+**3PL·풀필먼트 · 물류 운영 · 데이터·자동화**
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+3PL·풀필먼트 센터와 무역회사에서 4년 8개월 동안 겪은 운영 문제를, AI 코딩 도구로 직접 대시보드를 만들어 풀고 있습니다. 운영 기준은 직접 정하고, 계산 결과는 자동 점검으로 확인합니다.
 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+[프로젝트 보기]({{ '/portfolio/' | relative_url }}){: .btn .btn--primary} [이력 보기]({{ '/cv/' | relative_url }}){: .btn .btn--info}
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your Markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the Markdown files! You can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+## 대표 프로젝트
 
-For those users that need more advanced functionality, the template also supports the following popular tools:
-- [MathJax](https://www.mathjax.org/) for mathematical equations
-- [Mermaid](https://mermaid.js.org/) for diagraming
-- [Plotly](https://plotly.com/javascript/) for plotting
+| 프로젝트 | 구분 | 한 줄 요약 |
+|---|---|---|
+| [Excel 월 운영 매출 대시보드]({{ '/portfolio/01-excel-sales-dashboard/' | relative_url }}) | **실무 · 직접 제작** | 화주 10곳 매출을 한 화면에 모아 월 운영 보고·정산 대조에 사용 (화면은 가상 데이터 재현본) |
+| [다품종 3PL 운영 대시보드]({{ '/portfolio/02-scm-operations-dashboard/' | relative_url }}) | 개인 · 가상 데이터 | 입고부터 반품·정산까지 현장 흐름대로 보고, 정산 초안 오류를 실적으로 찾아냄 |
+| [AXPORT 수출 적합도 분석]({{ '/portfolio/03-axport-mini1/' | relative_url }}) | 5인 팀 | 공공데이터 수집·분석 엔진 통합·로그인 담당 |
+| [REBOOT 미국 수출 마케팅]({{ '/portfolio/04-reboot-marketing-dashboard/' | relative_url }}) | 6인 팀 · 팀장 | FDA·FTC 기준 광고 심의·고객 응대 탭 담당 |
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](https://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+## 핵심 경력 지표
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+<small>회사별 수치이며 서로 합산하지 않았습니다.</small>
 
-Create content & metadata
-------
-For site content, there is one Markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a Markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each Markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+| 지표 | 수치 | 출처 |
+|---|---|---|
+| 물류·무역 실무 경험 | **4년 8개월** | 전체 경력 |
+| 월 출고 운영 경험 | **50,000건 이상** | 굿앤파트너스 |
+| 화주사 대응 | **약 15개사** | 굿앤파트너스 |
+| 재고 정확도 | **99%** | 제이아이로지스 |
+| 월 마감 소요일 단축 | **7일 → 3일** | 두잇로지스 |
+| 장기 적치 보관비 감소 | **약 10%** | 젠미코리아 |
 
-**Markdown generator**
+## 소개
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual Markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the Markdown files, then commit and push them to the GitHub repository.
+3PL과 풀필먼트 센터에서 입출고, 재고, 작업 인력과 출고 일정을 관리했습니다. WMS와 Excel로 운영 데이터를 확인하고, 화주사와 소통하며 정산과 마감, 작업 동선 같은 현장의 문제를 개선해 왔습니다.
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and Markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+이후 수입식품 통관 서류와 보세창고 일정을 다루며 물류의 앞단까지 경험을 넓혔습니다. 지금은 한국무역아카데미 **무역 AX 2기**에서 데이터 분석, AI, Python과 웹 기반 시스템을 배우고 있습니다.
 
-Example: editing a Markdown file for a talk
-![Editing a Markdown file for a talk](/images/editing-talk.png)
+## 핵심 역량
 
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+<small>실무 경험은 재직 중 수행한 업무이고, <em>학습·적용 중</em> 표시는 교육 과정과 개인 프로젝트에서 익히고 있는 역량입니다.</small>
+
+**A. 3PL·풀필먼트 운영**
+- 입출고 관리
+- B2C · B2B 출고 운영
+- 화주사 대응 (약 15개사)
+- 출고 일정 · 채널별 작업계획
+
+**B. 재고·시스템 관리**
+- WMS · DAS
+- Excel 전산관리
+- 월간 재고 마감 · 재고 실사
+- 재고 정확도 관리
+
+**C. 현장 생산성·정산**
+- 작업 인력 · 하역 인력 배치
+- 생산성 데이터 확인
+- 작업 동선 · 입출고 레이아웃 개선
+- 화주사별 물류비 정산 · 운영 단가 검토
+
+**D. 수입통관·업무 자동화**
+- 수입 서류 검토 (Invoice · B/L · P/L)
+- UNI-PASS · 보세창고 일정 관리
+- 사방넷 D2C · B2B 출고 데이터
+- *학습·적용 중:* Python · AI 활용 업무 자동화, 웹 기반 운영 대시보드 구현
+
+## 프로젝트에서 확인한 수치
+
+<small>가상 데이터와 공개 배포본 기준이며, 실제 업무 효과를 검증한 수치는 아닙니다.</small>
+
+| 수치 | 내용 | 프로젝트 |
+|---|---|---|
+| **5 / 5** | 일부러 넣은 정산 오류를 실적 대조로 찾아냄 | [다품종 3PL 운영 대시보드]({{ '/portfolio/02-scm-operations-dashboard/' | relative_url }}) (가상 데이터) |
+| **447,538** | 계산 점검 항목 모두 통과 | [다품종 3PL 운영 대시보드]({{ '/portfolio/02-scm-operations-dashboard/' | relative_url }}) |
+| **466 → 215MB** | 무료 서버 강제 종료 해결 (최대 메모리) | [AXPORT]({{ '/portfolio/03-axport-mini1/' | relative_url }}) 공개 배포본 · 로컬 측정 (11-10 재측정 466→221MB) |
+
+## AX 학습 여정
+
+1. **실무 경험 — 현업의 맥락을 이해합니다.** SCM · 재고 · 출고 · 정산 · 통관
+2. **현재 학습 — 데이터와 기술로 시야를 넓힙니다.** 데이터 분석 · Python · AI · 자동화
+3. **지향점 — 현업 문제를 시스템으로 해결합니다.** 현장에서 실제로 쓸 수 있는 도구를 만드는 것이 목표입니다.
+
+## 연락처
+
+더 나은 운영을 만드는 일, 함께 이야기하고 싶습니다.
+
+- Email: [sojh90@naver.com](mailto:sojh90@naver.com)
+- GitHub: [github.com/SOJUNHEE](https://github.com/SOJUNHEE)
