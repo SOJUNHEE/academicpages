@@ -3,6 +3,8 @@ title: "REBOOT — 미국 수출 마케팅 대시보드 · 브랜드 홈페이�
 excerpt: "미국 채널 마케터용 대시보드와 소비자용 브랜드 홈페이지를 함께 만든 팀 프로젝트입니다. FDA·FTC 기준에 걸리는 표현을 근거와 함께 걸러 내는 광고 심의 탭과, 승인 후에만 발송되는 고객 응대 탭을 맡았고, 홈페이지 챗봇도 같은 심의 규칙으로 답변을 검사합니다. 광고 문구 검토를 직접 재 보니 4분 30초에서 1분으로 줄었습니다(1회 측정)."
 collection: portfolio
 order: 4
+kind: "6인 팀 프로젝트"
+role_short: "팀장 · 광고 심의(컴플라이언스)·고객 응대(CS) 탭 담당"
 header:
   teaser: "portfolio/reboot-compliance.png"
 ---

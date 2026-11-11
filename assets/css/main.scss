@@ -50,3 +50,116 @@
 .page__content table td:first-child {
   white-space: nowrap;
 }
+
+/* ---- 2026-11-10 대시보드형 홈(_pages/about.md, layout: splash) ----
+   메인 Flask 포트폴리오와 같은 색·글꼴: 차콜 #193342 · 청록 #0B7067 · 배경 #F6F8F8 · Gothic A1 */
+$jk-charcoal: #193342;
+$jk-accent: #0B7067;
+$jk-accent-ink: #0B655B;
+$jk-accent-wash: #E6F3F0;
+$jk-accent-dark: #7FD1C3;
+$jk-bg: #F6F8F8;
+$jk-text: #2D3C44;
+$jk-muted: #536671;
+$jk-line: #DCE4E5;
+
+body, .masthead, .page__footer { font-family: 'Gothic A1', 'Malgun Gothic', -apple-system, 'Apple SD Gothic Neo', sans-serif; }
+.splash { max-width: 1180px; margin: 0 auto; padding: 0 16px 32px; }
+.splash .page__content { width: 100%; float: none; }
+.splash .page__content > *:first-child { margin-top: 0; }
+body:has(.jk-hero) { background: $jk-bg; }
+
+.jk-hero, .jk-card { border-radius: 18px; padding: 24px 26px; margin: 0 0 16px; }
+.jk-hero { background: $jk-charcoal; color: #fff; padding: 30px 32px 28px; }
+.jk-eyebrow { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: .06em; color: $jk-accent-dark; }
+.jk-name { margin: 10px 0 0; font-size: 15px; font-weight: 700; color: #C9D6DC; }
+.jk-hero h1 { margin: 6px 0 0; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.25; font-weight: 800; color: #fff; word-break: keep-all; }
+.jk-hero h1 span { color: $jk-accent-dark; }
+.jk-lead { margin: 14px 0 0; max-width: 760px; font-size: 16px; line-height: 1.7; color: #D9E3E7; word-break: keep-all; }
+.jk-facts { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.jk-facts li { margin: 0; padding: 6px 14px; border-radius: 999px; background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .18); font-size: 13.5px; color: #E4ECEE; }
+.jk-facts b { color: #fff; }
+.jk-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 0; }
+.jk-btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid currentColor; font-size: 14px; font-weight: 700; text-decoration: none; color: inherit; }
+.jk-hero .jk-btn { color: #fff; border-color: rgba(255, 255, 255, .45); }
+.jk-btn.primary, .jk-hero .jk-btn.primary { background: $jk-accent; border-color: $jk-accent; color: #fff; }
+.jk-btn:hover { text-decoration: none; filter: brightness(1.08); }
+.jk-btn:focus-visible, .jk-arrow:focus-visible, .jk-project h3 a:focus-visible { outline: 2px solid $jk-accent; outline-offset: 2px; }
+
+.jk-card { background: #fff; border: 1px solid $jk-line; box-shadow: 0 1px 2px rgba(25, 51, 66, .05); color: $jk-text; }
+.jk-card-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin-bottom: 16px; position: relative; padding-right: 56px; }
+.jk-card-head h2 { margin: 0; padding: 0; border: 0; font-size: 19px; font-weight: 800; color: $jk-charcoal; }
+.jk-card-head p { margin: 0; font-size: 13px; color: $jk-muted; }
+.jk-arrow { position: absolute; right: 0; top: -6px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid $jk-line; background: $jk-bg; display: inline-flex; align-items: center; justify-content: center; font-size: 18px; color: $jk-charcoal; text-decoration: none; }
+.jk-arrow:hover { background: $jk-accent; border-color: $jk-accent; color: #fff; text-decoration: none; }
+
+.jk-kpis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0; }
+.jk-kpis > div { display: flex; flex-direction: column; padding: 14px 16px; border-radius: 12px; background: $jk-bg; border-top: 3px solid $jk-accent; }
+.jk-kpis dt { order: 2; font-size: 14px; font-weight: 700; color: $jk-charcoal; margin: 4px 0 0; }
+.jk-kpis dd { margin: 0; }
+.jk-kpis .v { order: 1; font-size: clamp(24px, 2.4vw, 30px); font-weight: 800; color: $jk-charcoal; letter-spacing: -.02em; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.jk-kpis .s { order: 3; font-size: 12.5px; color: $jk-muted; }
+
+.jk-projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.jk-project { display: flex; flex-direction: column; border: 1px solid $jk-line; border-radius: 14px; overflow: hidden; background: #fff; }
+.jk-thumb { display: block; aspect-ratio: 16 / 10; background: #EDF1F1; overflow: hidden; }
+.jk-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.jk-thumb.contain { padding: 12px; background: $jk-bg; }
+.jk-thumb.contain img { object-fit: contain; object-position: center; }
+.jk-project-body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 6px; }
+.jk-kind { margin: 0; display: inline-block; align-self: flex-start; padding: 2px 10px; border-radius: 999px; background: $jk-accent-wash; color: $jk-accent-ink; font-size: 12.5px; font-weight: 700; }
+.jk-project h3 { margin: 2px 0 0; font-size: 17px; line-height: 1.4; word-break: keep-all; }
+.jk-project h3 a { color: $jk-charcoal; text-decoration: none; }
+.jk-project h3 a:hover { text-decoration: underline; }
+.jk-excerpt, .jk-role, .jk-note { margin: 0; font-size: 13.5px; line-height: 1.6; color: $jk-text; word-break: keep-all; }
+.jk-role { color: $jk-muted; font-size: 12.5px; }
+.jk-note { color: $jk-accent-ink; font-size: 12.5px; font-weight: 700; }
+
+.jk-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-bottom: 16px; }
+.jk-row > .jk-card { margin: 0; min-width: 0; }
+.jk-span-2 { grid-column: span 2; }
+.jk-timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.jk-timeline li { margin: 0; display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 2px 14px; padding: 12px 14px; border-radius: 12px; background: $jk-bg; }
+.jk-timeline .when { grid-row: 1 / span 3; font-size: 12.5px; font-weight: 700; color: $jk-muted; font-variant-numeric: tabular-nums; }
+.jk-timeline b { font-size: 15px; color: $jk-charcoal; }
+.jk-timeline .what { font-size: 13px; color: $jk-text; word-break: keep-all; }
+.jk-timeline .hit { font-size: 13px; font-weight: 700; color: $jk-accent-ink; }
+.jk-ax { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.jk-ax li { margin: 0; display: flex; flex-direction: column; padding: 12px 14px; border-radius: 12px; background: $jk-bg; border-top: 3px solid $jk-accent-ink; }
+.jk-ax b { font-size: 22px; font-weight: 800; color: $jk-charcoal; font-variant-numeric: tabular-nums; }
+.jk-ax span { font-size: 13.5px; font-weight: 700; color: $jk-charcoal; }
+.jk-ax em { font-style: normal; font-size: 12.5px; color: $jk-muted; }
+.jk-skills { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.jk-skills > div { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border-radius: 12px; background: $jk-bg; }
+.jk-skills b { font-size: 14.5px; color: $jk-charcoal; }
+.jk-skills span { font-size: 13px; line-height: 1.6; color: $jk-text; word-break: keep-all; }
+.jk-skills em { font-style: normal; font-weight: 700; color: $jk-accent-ink; }
+.jk-contact .jk-btn { color: $jk-charcoal; border-color: $jk-line; }
+.jk-contact .jk-btn.primary { color: #fff; border-color: $jk-accent; }
+
+/* 테마의 .page__content p·a 규칙보다 우선하도록 범위를 좁혀 다시 지정 */
+.page__content .jk-lead { font-size: 16px; }
+.page__content .jk-excerpt, .page__content .jk-role, .page__content .jk-note { font-size: 14px; line-height: 1.6; }
+.page__content .jk-role, .page__content .jk-note { font-size: 13px; }
+.page__content .jk-card-head p, .page__content .jk-kind { font-size: 13px; }
+.page__content a.jk-btn, .page__content a.jk-arrow, .page__content .jk-project h3 a { text-decoration: none; }
+.page__content .jk-project h3 { font-size: 18px; }
+
+@media (max-width: 1024px) {
+  .jk-row { grid-template-columns: minmax(0, 1fr); }
+  .jk-span-2 { grid-column: auto; }
+  .jk-skills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  .jk-hero, .jk-card { padding: 20px 18px; }
+  .jk-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .jk-kpis > div { padding: 12px; }
+  .jk-projects, .jk-skills { grid-template-columns: minmax(0, 1fr); }
+  .jk-timeline li { grid-template-columns: minmax(0, 1fr); }
+  .jk-timeline .when { grid-row: auto; }
+}
+
+/* 하단 바 글자 대비(WCAG AA, 2026-11-11): 라이트 테마 기본 연회색(#bdc1c4)은 배경 #f2f3f3 위에서 1.6:1이라 진하게. 다크 테마는 그대로 */
+html:not([data-theme="dark"]) .page__footer,
+html:not([data-theme="dark"]) .page__footer a,
+html:not([data-theme="dark"]) .page__footer-copyright { color: $jk-muted; }

@@ -3,6 +3,9 @@ title: "Excel 월 운영 매출 대시보드 — 화주 10곳 보관·입고·�
 excerpt: "두잇로지스에서 화주 10곳의 일자별 보관·입고·출고 매출을 피벗테이블 5개·슬라이서 8개·차트 5개(회사 원본 기준)로 한 화면에 모은 대시보드를 처음부터 직접 만들어, 월 운영 보고와 정산·마감 대조에 썼습니다. 원본은 실제 화주사 정보라 비공개이고, 화면은 가상 데이터 재현본입니다."
 collection: portfolio
 order: 1
+kind: "실무 · 직접 제작"
+role_short: "설계·제작 (개인) · 월 운영 보고와 정산·마감 대조에 사용"
+image_note: "화면: 가상 데이터 재현본 (회사 원본 비공개)"
 header:
   teaser: "portfolio/excel-dashboard-sample.png"
 ---
